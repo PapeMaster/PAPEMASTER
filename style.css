@@ -22,7 +22,7 @@ html{
   }
 
 #version{
-    color: rgb(201, 230, 255);
+    color: rgb(146, 204, 255);
 }
 
 .Lorem_Ipsum {
@@ -32,13 +32,11 @@ html{
     line-height: 1.2;
     text-align: right;
     margin: 0;
-
-    z-index: 3;
   }
   
 
 h2{
-    font-size: 40px;
+    font-size: 30px;
     margin: 0px;
     font-family: "Eater", serif;
 }
@@ -88,9 +86,11 @@ section.sticky{
 }
 
 section.fullScreen{
-    height: 100vh;
+    
+    height: 50vh;
     top: 0;
     margin-top: 0;
+    border-radius: 100px;
     z-index: 4;
 }
 
@@ -142,22 +142,61 @@ section.head .ache{
     height: 50vh;
 }
 
-
-
-section.galeria article{
+section.galeriaImagenes{
     display: flex;
-    align-items: flex-end;
+    flex: 1;
+    background: #df1082;
+    flex-direction: column;  /* Arrange main container elements in a column */
+    align-items: center;     /* Center elements horizontally */
+    text-align: center;     /* Center text content */
+    border-radius: 100px;
+    height: 50vh;
+}
+
+.flexImg {
+    display: flex;
+    flex-direction: row;     /* Arrange images in a row */
+    justify-content: center; /* Center images horizontally */
+    gap: 10px;               /* Optional: Add some space between the images */
+}
+
+.flexImg img {
+    width: 100px;  /* Set a specific width for the images */
+    height: auto;  /* Maintain the aspect ratio of the images */
+}
+
+section.galeriaVideos{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
     background: #df1082;
     border-radius: 100px;
-    padding: 3.125vw;
-    align-items: center;
-    flex: 1;
-    display: flex;
+    height: 50vh;
 }
 
-section.galeriaImagenes img{
-    width: 100px;
+.flexImg2 img{
+    width: 200px;
 }
+
+
+section.galeriaClips{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    background: #df1082;
+    border-radius: 100px;
+    height: 50vh;
+
+}
+
+.flexImg3 img{
+    width: 200px;
+}
+
 
 
 /*ANIMATIONS TITLE*/
@@ -203,6 +242,7 @@ section.galeriaClips figure img{
 
 
 
+
 /* FOOTER STYLING */
 
 section.fullScreen{
@@ -234,84 +274,36 @@ section.fullScreen a:hover{
 
 @media only screen and (max-width: 768px) {
     html, body{
-
-            --border-radius: 50px;
-            --gutter: 3.125vw;
+        background-color: rgb(128, 51, 0);
+        --border-radius: 100px;
+        overflow-x: hidden;
+        margin: 0;
     }
- 
+
     
-section.head h1{
-    font-size: 44px;
-}
-section.head .ache{
-    flex-direction: column;
-    flex-basis: 15vh;
-    flex: 0.60;
-    position: initial;
-}    
-section.galeria h2{
-        font-size: 15px;
-    }
-    #version{
-        float: left;
-        font-size: 10px;
+
+    .Pape {
+        font-size: 40px;
     }
 
-    section.galeriaImagenes{
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        flex-basis: 10vh;
-        flex: 0.50;
-        position: initial;
-        margin: 0;
+    h2 {
+        font-size: 20px;
     }
 
-    section.galeriaVideos{
-        flex-direction: column;
-        flex-basis: 15vh;
-        flex: 0.60;
-        position: initial;
-        margin: 0;
-    }
+    #version {
+        font-size: 20px;
 
-    section.galeriaClips{
-        flex-direction: column;
-        flex-basis: 15vh;
-        flex: 0.6;
-        position: initial;
-        margin: 0;
-    }
-
-    section.fullScreen{
-        flex-direction: column;
-        flex-basis: 15vh;
-        flex: 0.60;
-        position: initial;
-        margin: 0;
     }
 
     nav ul li {
-        font-size: 14px;
-        margin-left: 4px;
-    }  
-
-    section.service article{
-        flex-direction: column;
+        margin-left: 25px;
     }
 
-    section-service figure{
-        flex-basis: 25vh;
+ 
+    section.fullScreen a,
+    section.fullScreen p{   
+        font-size: 30px;
+        color: #b700ff;
+    
     }
-
-
-
-/*     section.contact a{
-        font-size: 50px;
-        transform: rotate(90deg);
-    }
- */
-
-
-
 }
